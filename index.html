@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ganesh Gone — Full Stack Developer</title>
+<meta name="description" content="Ganesh Gone — Full Stack Developer. Projects, tech stack, and contact.">
+
+<!-- Open Graph / social sharing -->
+<meta property="og:title" content="Ganesh Gone — Full Stack Developer">
+<meta property="og:description" content="Projects, tech stack, and contact.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+
+
+<!-- ============================================================
+     NAVBAR — floating glassmorphism nav
+     ============================================================ -->
+<nav class="navbar" id="navbar">
+  <a href="#top" class="nav-logo">&lt;<span>GG</span>/&gt;</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#tech">Tech Stack</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#contact" class="nav-cta">Contact</a></li>
+  </ul>
+  <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+  </button>
+</nav>
+<div class="nav-mobile-panel" id="navMobilePanel">
+  <a href="#about">About</a>
+  <a href="#projects">Projects</a>
+  <a href="#tech">Tech Stack</a>
+  <a href="#reviews">Reviews</a>
+  <a href="#contact">Contact</a>
+</div>
+
+
+<div class="loader" id="loader">
+  <div class="loader-bar" id="loader-bar"></div>
+</div>
+
+<div class="sequence-wrapper">
+  <div class="sequence-sticky">
+    <canvas id="sequence-canvas"></canvas>
+
+    <!-- Hero overlay: sits above the canvas sequence -->
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <div class="wrap-inner">
+          <p class="eyebrow">~$ whoami</p>
+          <h1 class="hero-name">Ganesh Gone</h1>
+          <p class="hero-title">Full Stack Developer <span>//</span> building fast, thoughtful products end-to-end</p>
+          <p class="hero-tagline">I design and ship complete web products — from database schema to pixel-perfect interface — with a focus on performance and clean engineering.</p>
+          <div class="hero-actions">
+            <a href="#projects" class="btn-primary" data-scroll>
+              View My Work
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+            </a>
+            <span class="scroll-hint">scroll to animate ↓</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- ============================================================
+     ABOUT
+     ============================================================ -->
+<section class="section" id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-body">
+        <p class="eyebrow">~/about</p>
+        <h2 class="section-title">A developer who cares about the whole stack</h2>
+        <p>I'm <strong>Ganesh Gone</strong>, a full stack developer who enjoys the entire arc of building software — sketching the data model, wiring up the API, and polishing the interface until it feels inevitable.</p>
+        <p>Most of my recent work sits at the intersection of <strong>React/Next.js</strong> front ends and <strong>Node.js</strong> back ends, deployed on modern serverless infrastructure. I like small, well-tested codebases more than clever ones.</p>
+        <p>Outside of client and product work, I contribute to a couple of open-source tools and write about performance and developer experience.</p>
+      </div>
+      <div class="stat-grid">
+        <div class="stat-card"><div class="stat-num">4+</div><div class="stat-label">years shipping production apps</div></div>
+        <div class="stat-card"><div class="stat-num">30+</div><div class="stat-label">projects launched</div></div>
+        <div class="stat-card"><div class="stat-num">12</div><div class="stat-label">open-source contributions</div></div>
+        <div class="stat-card"><div class="stat-num">100%</div><div class="stat-label">remote-friendly</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PROJECTS — rendered from the `projects` array below via JS
+     ============================================================ -->
+<section class="section" id="projects">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">~/projects</p>
+      <h2 class="section-title">Selected work</h2>
+      <p class="section-sub">Seven projects spanning full stack apps, tooling, and experiments. Each card links to a live deployment and the source.</p>
+    </div>
+    <div class="projects-grid" id="projectsGrid"><!-- injected by script.js logic below --></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     TECH STACK — rendered from the `techStack` array below via JS
+     ============================================================ -->
+<section class="section" id="tech">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">~/stack</p>
+      <h2 class="section-title">Tech stack</h2>
+      <p class="section-sub">Tools I reach for daily, plus a few I keep close for the right project.</p>
+    </div>
+    <div class="tech-grid" id="techGrid"><!-- injected by script.js logic below --></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     REVIEWS — rendered from the `testimonials` array below via JS
+     ============================================================ -->
+<section class="section" id="reviews">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">~/reviews</p>
+      <h2 class="section-title">What people say</h2>
+      <p class="section-sub">A few words from people I've worked with — clients, teammates, and collaborators.</p>
+    </div>
+    <div class="reviews-grid" id="reviewsGrid"><!-- injected by script.js logic below --></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CONTACT / FOOTER
+     ============================================================ -->
+<section class="contact-section" id="contact">
+  <div class="wrap">
+    <div class="contact-card">
+      <p class="eyebrow" style="justify-content:center;">~/contact</p>
+      <h2 class="contact-title">Let's build something</h2>
+      <p class="contact-sub">Open to full-time roles, freelance projects, and interesting collaborations. Fastest way to reach me is email.</p>
+
+      <div class="contact-links" id="socialLinks"><!-- injected by script.js logic below --></div>
+
+      <a href="a.pdf" download class="btn-cv">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download CV
+      </a>
+
+      <div class="footer-bottom">
+        <span>&copy; <span id="year"></span> Ganesh Gone. Built with HTML, CSS &amp; vanilla JS. Made by <a href="https://instagram.com/codewith_gg" target="_blank" rel="noopener noreferrer">codewith_gg</a>.</span>
+        <a href="#top">Back to top ↑</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     DATA + INTERACTIONS
+     Swap in your real links, repos, and images in the arrays below.
+     ============================================================ -->
+
+<script src="script.js" defer></script>
+</body>
+</html>
